@@ -46,6 +46,10 @@ public class Interface<T> extends JFrame implements ActionListener{
 		filmes.add(velozes);
 		filmes.add(indiana);
 		filmes.add(pokemon);
+		grafo.adicionarVertice(pokemon);
+		grafo.adicionarVertice(velozes);
+		grafo.adicionarVertice(indiana);
+		grafo.adicionarVertice(killbill);
 		inicial =  new JPanel();
 		inicial.setLayout(new BorderLayout());
 		setTitle("Ado 1 - Projeto Integrador");
@@ -234,7 +238,6 @@ public class Interface<T> extends JFrame implements ActionListener{
 					do {
 						decisao = Integer.parseInt(JOptionPane.showInputDialog(listaFilmesIndex()));
 						decisao -= 1;
-						
 						if(decisao == -1) {
 							break;
 						}else {
